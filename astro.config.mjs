@@ -9,22 +9,20 @@ import rehypeKatex from 'rehype-katex';
 import remarkPlantUML from '@akebifiky/remark-simple-plantuml';
 import { remarkReadingTime } from './remark-plugins/remark-reading-time.mjs';
 import { remarkDiagram } from './remark-plugins/remark-diagram.mjs';
-import icon from "astro-icon";
 import UnoCSS from 'unocss/astro';
 
 import markdoc from "@astrojs/markdoc";
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    ssr: {
-      external: ['svgo'],
-      noExternal: ['swiper', 'leaflet']
-    }
-  },
+  // vite: {
+  //   ssr: {
+  //     external: ['svgo'],
+  //     noExternal: ['swiper', 'leaflet']
+  //   }
+  // },
   site: 'https://hellotham.github.io',
-  base: '/astro-blog/',
-  integrations: [icon(), UnoCSS({
+  integrations: [UnoCSS({
     injectReset: true // or a path to the reset file
   }), sitemap(), mdx(), alpinejs(), robotsTxt(), markdoc()],
   markdown: {

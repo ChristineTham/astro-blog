@@ -22,5 +22,17 @@ export default defineConfig({
     presetForms(),
     presetTypography()
   ],
-  safelist: []
+  safelist: [
+    'i-heroicons-sparkles',
+    'i-heroicons-puzzle-piece',
+    'i-heroicons-presentation-chart-bar',
+    'i-heroicons-clock',
+    'i-bi-envelope',
+    'i-bi-facebook',
+    'i-bi-github',
+    'i-bi-instagram',
+    'i-bi-linkedin',
+    'i-bi-telephone',
+    'i-bi-twitter'    
+  ]
 })

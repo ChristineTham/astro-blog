@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content'
-import { Icon } from 'astro-icon/components'
 import { Logo } from '../config'
 
 const social = await getCollection('social')
@@ -77,7 +76,7 @@ const social = await getCollection('social')
               rel='noopener noreferrer'
               target='_blank'
             >
-              <Icon name={'bi:' + s.data.icon} class='h-5 w-5' />
+              <div class={'h-5 w-5 i-bi-' + s.data.icon} />
               <span class='sr-only'>{s.data.name}</span>
             </a>
           ) : (

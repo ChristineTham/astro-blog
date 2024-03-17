@@ -1,5 +1,4 @@
 ---
-import { Icon } from 'astro-icon/components'
 import { NavigationLinks } from '../config'
 import Search from '../components/search.astro'
 import Theme from '../components/theme.astro'
@@ -22,18 +21,18 @@ import { Logo } from '../config'
             aria-expanded='false'
           >
             <span class='sr-only'>Open main menu</span>
-            <Icon
+            <div
               x-bind:class="{'hidden': isOpen, 'block': !isOpen }"
-              class='block h-6 w-6'
+              class='i-heroicons-menu block h-6 w-6'
               aria-hidden='true'
-              name='heroicons-outline:menu'
-            />
-            <Icon
+            >
+            </div>
+            <div
               x-bind:class="{'block': isOpen, 'hidden': !isOpen }"
-              class='hidden h-6 w-6'
+              class='i-heroicons-x hidden h-6 w-6'
               aria-hidden='true'
-              name='heroicons-outline:x'
-            />
+            >
+            </div>
           </button>
         </div>
         <div class='flex flex-1 items-center justify-center lg:items-stretch lg:justify-start'>

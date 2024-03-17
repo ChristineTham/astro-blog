@@ -1,7 +1,6 @@
 ---
 import { getEntry } from 'astro:content'
 import { Image } from 'astro:assets'
-import { Icon } from 'astro-icon/components'
 import type { Frontmatter } from '../config'
 import Categories from '../components/categories.astro'
 import Tags from '../components/tags.astro'
@@ -60,7 +59,7 @@ if (frontmatter.author) {
         )
       }
       <span class='mr-6 flex items-center'>
-        <Icon class='mr-1 h-6 w-6 text-purple-200' name='heroicons-outline:calendar' />
+        <div class='i-heroicons-calendar-days mr-1 h-6 w-6 text-purple-200'></div>
         <span class='ml-1 text-purple-200 font-semibold'>
           {new Date(frontmatter.publishDate).toString()}
         </span>
@@ -68,7 +67,7 @@ if (frontmatter.author) {
       {
         frontmatter.minutesRead && (
           <span class='flex items-center'>
-            <Icon class='mr-1 h-6 w-6 text-purple-200' name='heroicons-outline:clock' />
+            <div class='i-heroicons-clock mr-1 h-6 w-6 text-purple-200' />
             <span class='ml-1 text-purple-200 font-semibold'>{frontmatter.minutesRead}</span>
           </span>
         )

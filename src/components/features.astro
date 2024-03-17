@@ -1,6 +1,4 @@
 ---
-import { Icon } from 'astro-icon/components'
-
 const features = [
   {
     name: 'Easy to Create Content',
@@ -11,8 +9,8 @@ const features = [
   {
     name: 'Customisable Design',
     description:
-      'Built using the TailwindCSS ecosystem (including HeroIcons and Hero Patterns). Very easy to customise and change design. Template illustrations by unDraw.',
-    icon: 'puzzle'
+      'Built using the TailwindCSS ecosystem (including HeroIcons and Hero Patterns) but using UnoCSS. Very easy to customise and change design. Template illustrations by unDraw.',
+    icon: 'puzzle-piece'
   },
   {
     name: 'SEO Ready',
@@ -55,11 +53,7 @@ const features = [
             <div class='relative'>
               <dt>
                 <div class='absolute h-12 w-12 flex items-center justify-center rounded-md bg-purple-500 text-white dark:bg-purple-400 dark:text-black'>
-                  <Icon
-                    class='h-6 w-6'
-                    aria-hidden='true'
-                    name={'heroicons-outline:' + feature.icon}
-                  />
+                  <div class={'h-6 w-6 i-heroicons-' + feature.icon} aria-hidden='true' />
                 </div>
                 <p class='ml-16 text-lg text-gray-900 font-medium leading-6 dark:text-gray-200'>
                   {feature.name}

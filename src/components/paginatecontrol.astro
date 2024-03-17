@@ -1,5 +1,4 @@
 ---
-import { Icon } from 'astro-icon/components'
 import type { CollectionEntry } from 'astro:content'
 import type { Page } from 'astro'
 
@@ -48,7 +47,7 @@ const { base, page } = Astro.props
             ]}
           >
             <span class='sr-only'>Previous</span>
-            <Icon class='h-5 w-5' name='heroicons-solid:chevron-left' />
+            <div class='i-chevron-left-solid h-5 w-5' />
           </a>
           {Array.from({ length: page.lastPage }, (_, index) => index + 1).map((i) => (
             <a
@@ -74,7 +73,7 @@ const { base, page } = Astro.props
             ]}
           >
             <span class='sr-only'>Next</span>
-            <Icon class='h-5 w-5' name='heroicons-solid:chevron-right' />
+            <div class='i-heroicons-chevron-right-solid h-5 w-5' />
           </a>
         </nav>
       </div>
