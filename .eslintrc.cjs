@@ -4,7 +4,8 @@ module.exports = {
     'plugin:css/recommended',
     'plugin:mdx/recommended',
     'plugin:markdown/recommended-legacy',
-    'plugin:astro/recommended'
+    'plugin:astro/recommended',
+    "@unocss"
   ],
   "plugins": [
     "css"

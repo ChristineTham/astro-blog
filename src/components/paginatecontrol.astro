@@ -35,7 +35,7 @@ const { base, page } = Astro.props
     page.size < page.total && (
       <div class='ml-4'>
         <nav
-          class='relative z-0 inline-flex -space-x-px rounded-md shadow-sm'
+          class='relative z-0 inline-flex rounded-md shadow-sm -space-x-px'
           aria-label='Pagination'
         >
           <a
@@ -80,7 +80,7 @@ const { base, page } = Astro.props
       </div>
     )
   }
-  <p class='ml-4 italic text-white'>
+  <p class='ml-4 text-white italic'>
     Articles {page.start + 1}-{page.end + 1} (total {page.total})
   </p>
 </div>
