@@ -42,23 +42,7 @@ export const NavigationLinks = [
   { name: 'Home', href: '' },
   { name: 'About', href: 'about' },
   { name: 'Contact', href: 'contact' },
-  { name: 'Blog', href: 'blog' },
-  { name: 'Docs', href: 'doc/introduction' }
+  { name: 'Blog', href: 'blog' }
 ]
 
 export const PAGE_SIZE = 6
-
-export const GITHUB_EDIT_URL = `https://github.com/hellotham/hello-astro`
-
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`
-
-export type Sidebar = Record<string, { text: string; link: string }[]>
-
-export const SIDEBAR: Sidebar = {
-  'Section Header': [
-    { text: 'Introduction', link: 'doc/introduction' },
-    { text: 'Page 2', link: 'doc/page-2' },
-    { text: 'Page 3', link: 'doc/page-3' }
-  ],
-  'Another Section': [{ text: 'Page 4', link: 'doc/page-4' }]
-}

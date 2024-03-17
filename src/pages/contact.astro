@@ -1,11 +1,11 @@
 ---
 import Base from '../layouts/base.astro'
-import Map from '../components/map.astro'
 import PageHero from '../components/pagehero.astro'
 import { SiteMetadata } from '../config'
 import coverSVG from '../assets/svg/undraw/undraw_contact_us.svg'
 import socialImage from '../assets/undraw/undraw_contact_us.png'
 import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
 
 const frontmatter = {
   title: 'Contact',
@@ -33,7 +33,7 @@ const social = await getCollection('social')
         <div class='flex flex-wrap items-start'>
           <div class='block w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-4/12 lg:flex'>
             <div class='w-full'>
-              <Map loc={SiteMetadata.latlng} zoom={11} />
+              <Image src={coverSVG} alt='cover image' />
             </div>
           </div>
           <div class='w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12'>
