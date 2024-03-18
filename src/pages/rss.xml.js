@@ -21,7 +21,7 @@ export async function GET() {
       link: import.meta.env.BASE_URL + '/blog/' + post.slug,
       title: post.data.title,
       description: post.data.description,
-      pubDate: post.data.publishDate.toString()
+      pubDate: post.data.pubDate.toString()
     })),
     // (optional) inject custom xml
     customData: `<language>en</language>`

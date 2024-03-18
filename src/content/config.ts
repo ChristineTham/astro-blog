@@ -1,51 +1,32 @@
 // 1. Import your utilities and schemas
 import { z, defineCollection, reference } from 'astro:content'
+import { rssSchema } from '@astrojs/rss'
 
 // 2. Define your collections
-const blogCollection = defineCollection({
+const blog = defineCollection({
   schema: ({ image }) =>
-    z.object({
+    rssSchema.extend({
       draft: z.boolean().optional(),
-      title: z.string(),
-      description: z.string(),
       author: reference('author').optional(),
-      publishDate: z.date(),
-      coverSVG: image().optional(),
-      coverImage: image().optional(),
-      socialImage: image().optional(),
+      image: image().optional(),
       images: z.array(image()).optional(),
       gallery: z.string().optional(),
       categories: z.array(reference('category')).optional(),
       tags: z.array(z.string()).optional(),
-      extra: z.array(z.enum(['math', 'markmap', 'mermaid', 'gallery'])).optional(),
       minutesRead: z.string().optional()
     })
 })
 
-const docCollection = defineCollection({
-  schema: ({ image }) =>
-    z.object({
-      draft: z.boolean().optional(),
-      section: z.string(),
-      weight: z.number().default(0),
-      title: z.string(),
-      description: z.string(),
-      images: z.array(image()).optional(),
-      gallery: z.string().optional()
-    })
-})
-
-const categoryCollection = defineCollection({
+const category = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
       description: z.string(),
-      coverSVG: image(),
-      socialImage: image()
+      image: image()
     })
 })
 
-const authorCollection = defineCollection({
+const author = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -55,7 +36,7 @@ const authorCollection = defineCollection({
     })
 })
 
-const socialCollection = defineCollection({
+const social = defineCollection({
   type: 'data',
   schema: z.object({
     name: z.string(),
@@ -66,9 +47,8 @@ const socialCollection = defineCollection({
 
 // 3. Export multiple collections to register them
 export const collections = {
-  blog: blogCollection,
-  doc: docCollection,
-  category: categoryCollection,
-  author: authorCollection,
-  social: socialCollection
+  blog,
+  category,
+  author,
+  social
 }

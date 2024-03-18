@@ -32,11 +32,10 @@ export const SiteMetadata = {
   buildTime: new Date()
 }
 
-export { default as Logo } from './assets/svg/astro/astro-icon-dark.svg'
+export { default as Logo } from './assets/astro/astro-icon-dark.svg'
 export { default as LogoImage } from './assets/astro/astro-logo-dark.png'
-export { default as FeaturedSVG } from './assets/svg/undraw/undraw_design_inspiration.svg'
-export { default as DefaultSVG } from './assets/svg/undraw/undraw_my_feed.svg'
-export { default as DefaultImage } from './assets/undraw/undraw_my_feed.png'
+export { default as FeaturedImage } from './assets/images/Alpine lake sunset.jpg'
+export { default as DefaultImage } from './assets/images/Alpine lake sunset.jpg'
 
 export const NavigationLinks = [
   { name: 'Home', href: '' },

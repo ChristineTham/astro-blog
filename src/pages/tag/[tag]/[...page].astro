@@ -8,8 +8,7 @@ import Base from '../../../layouts/base.astro'
 import PageHero from '../../../components/pagehero.astro'
 import BlogRoll from '../../../components/blogroll.astro'
 import PaginateControl from '../../../components/paginatecontrol.astro'
-import coverSVG from '../../../assets/svg/undraw/undraw_add_notes.svg'
-import socialImage from '../../../assets/undraw/undraw_add_notes.png'
+import image from '../../../assets/images/typewriter.jpg'
 
 export interface Props {
   page: Page<CollectionEntry<'blog'>>
@@ -25,9 +24,8 @@ const frontmatter: Frontmatter = {
     (page.size < page.total ? ' (page ' + page.currentPage + ' of ' + page.lastPage + ')' : ''),
   description:
     'Showing articles ' + (page.start + 1) + '-' + (page.end + 1) + ' (total ' + page.total + ')',
-  coverSVG: coverSVG,
-  socialImage: socialImage,
-  publishDate: SiteMetadata.buildTime
+  image: image,
+  pubDate: SiteMetadata.buildTime
 }
 
 const currentPage = Astro.url.pathname.replace(/(\/\d*)?\/$/, '')
@@ -36,7 +34,9 @@ export async function getStaticPaths({ paginate }: { paginate: PaginateFunction 
   const allPosts = await getCollection('blog', ({ data }) => {
     return data.draft !== true
   })
-  const posts = allPosts.sort((a, b) => +b.data.publishDate - +a.data.publishDate)
+  const posts = allPosts.sort((a, b) =>
+    a.data.pubDate && b.data.pubDate ? +b.data.pubDate - +a.data.pubDate : 0
+  )
 
   const tags = Array.from(new Set(posts.flatMap((post) => post.data.tags)))
 
@@ -54,12 +54,7 @@ export async function getStaticPaths({ paginate }: { paginate: PaginateFunction 
 
 <Base frontmatter={frontmatter}>
   <header>
-    <PageHero
-      title={frontmatter.title}
-      description={frontmatter.description}
-      coverSVG={frontmatter.coverSVG}
-      socialImage={frontmatter.socialImage}
-    >
+    <PageHero title={frontmatter.title!} description={frontmatter.description} {image}>
       <PaginateControl base={currentPage} page={page} />
     </PageHero>
   </header>

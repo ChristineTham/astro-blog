@@ -2,9 +2,8 @@
 title: MIT Licence
 description: The MIT License, explained.
 author: chris-tham
-publishDate: 2022-08-09T00:00:00.000Z
-coverSVG: ../../assets/svg/undraw/undraw_open_source.svg
-socialImage: ../../assets/undraw/undraw_open_source.png
+pubDate: 2022-08-09T00:00:00.000Z
+image: ../../assets/images/cross.jpg
 categories:
   - information
 tags:

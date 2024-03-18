@@ -1,5 +1,6 @@
 ---
-import { FeaturedSVG } from '../config'
+import { Image } from 'astro:assets'
+import { FeaturedImage } from '../config'
 ---
 
 <div class='relative overflow-hidden bg-white dark:bg-gray-900'>
@@ -23,21 +24,14 @@ import { FeaturedSVG } from '../config'
           <h1
             class='text-left text-4xl text-gray-900 font-extrabold tracking-tight md:text-6xl sm:text-5xl dark:text-gray-100'
           >
-            <span class='block xl:inline'>hello</span>{' '}
-            <span class='block text-purple-700 xl:inline dark:text-purple-300'>Astro</span>
+            <span class='block text-purple-700 xl:inline dark:text-purple-300'>Astro Blog</span>
           </h1>
           <p
             class='mt-3 text-base text-gray-600 lg:mx-0 sm:mx-auto md:mt-5 sm:mt-5 sm:max-w-xl md:text-xl sm:text-lg dark:text-gray-300'
           >
-            Hello Astro is a multi-purpose starter theme written in Typescript, TailwindCSS,
-            AlpineJS and Astro. It supports Markdown, Markdoc and MDX based pages, documentation
-            pages and blog posts (including math and diagrams), plus full text search.
-          </p>
-          <p
-            class='mt-3 text-base text-gray-600 lg:mx-0 sm:mx-auto md:mt-5 sm:mt-5 sm:max-w-xl md:text-xl sm:text-lg dark:text-gray-300'
-          >
-            Hello Astro can be used for creating corporate/marketing sites, blogs, documentation
-            sites, portfolio sites (supporting photo galleries) or any combination of the above!
+            Astro Blog is a starter template written in Typescript, UnoCSS (using TailwindCSS
+            directives), AlpineJS and Astro. It supports Markdown blog posts (including photo
+            galleries), plus full text search.
           </p>
           <p
             class='mt-3 text-base text-gray-600 lg:mx-0 sm:mx-auto md:mt-5 sm:mt-5 sm:max-w-xl md:text-xl sm:text-lg dark:text-gray-300'
@@ -71,10 +65,10 @@ import { FeaturedSVG } from '../config'
     </div>
   </div>
   <div class='bg-purple-100 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 dark:bg-purple-500'>
-    <img
+    <Image
       class='h-56 w-full object-cover lg:h-full lg:w-full md:h-96 sm:h-72'
-      src={FeaturedSVG.src}
-      alt='featured'
+      src={FeaturedImage}
+      alt='a beautiful field of flowers next to a lake surrounded by mountains and trees at sunset'
     />
   </div>
 </div>

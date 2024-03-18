@@ -15,12 +15,7 @@ let cat = await getEntry('category', 'general')
 if (post.data.categories) {
   cat = await getEntry(post.data.categories[0])
 }
-const image =
-  post.data.coverSVG ||
-  post.data.coverImage ||
-  (post.data.images && post.data.images[0]) ||
-  post.data.socialImage ||
-  cat.data.coverSVG
+const image = post.data.image || (post.data.images && post.data.images[0]) || cat.data.image
 let author = await getEntry('author', 'default')
 if (post.data.author) {
   author = await getEntry(post.data.author)
@@ -49,12 +44,14 @@ if (post.data.author) {
         </h1>
       </a>
       <div class='flex flex-wrap items-center'>
-        <span
-          class='mr-3 inline-flex items-center border-r-2 border-purple-200 py-1 pr-3 text-xs text-gray-500 leading-none dark:border-purple-600 dark:text-gray-400'
-        >
-          <div class='i-heroicons-calendar-days mr-1 h-4 w-4'></div>
-          {post.data.publishDate.toDateString()}
-        </span>
+        {
+          post.data.pubDate && (
+            <span class='mr-3 inline-flex items-center border-r-2 border-purple-200 py-1 pr-3 text-xs text-gray-500 leading-none dark:border-purple-600 dark:text-gray-400'>
+              <div class='i-heroicons-calendar-days mr-1 h-4 w-4' />
+              {post.data.pubDate.toDateString()}
+            </span>
+          )
+        }
         {
           post.data.minutesRead && (
             <span class='mr-3 inline-flex items-center border-r-2 border-purple-200 py-1 pr-3 text-xs text-gray-500 leading-none dark:border-purple-600 dark:text-gray-400'>

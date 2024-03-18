@@ -15,5 +15,6 @@
   },
   "files.associations": {
     "*.mdoc": "markdown"
-  }
+  },
+  "editor.tabSize": 2
 }

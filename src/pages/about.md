@@ -2,9 +2,8 @@
 layout: ../layouts/page.astro
 title: About
 description: Description of Hello Astro Starter
-publishDate: '2023-06-13T00:00:00.000Z'
-coverSVG: ../assets/svg/undraw/undraw_about_me.svg
-socialImage: ../assets/undraw/undraw_about_me.png
+pubDate: 2023-06-13T00:00:00.000Z
+image: ../assets/images/Alpine lake sunset.jpg
 ---
 
 This is multi-purpose Astro starter template based on the following:

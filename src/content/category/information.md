@@ -1,6 +1,5 @@
 ---
 title: 'information'
-coverSVG: ../../assets/svg/undraw/undraw_instruction_manual.svg
-socialImage: ../../assets/undraw/undraw_instruction_manual.png
+image: ../../assets/images/State Library NSW 2017.jpeg
 description: 'Information articles.'
 ---

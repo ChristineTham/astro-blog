@@ -8,21 +8,21 @@ import Features from '../components/features.astro'
 import FindOutMore from '../components/findoutmore.astro'
 import LatestArticles from '../components/latestarticles.astro'
 import CTA from '../components/cta.astro'
-import coverSVG from '../assets/svg/undraw/undraw_design_inspiration.svg'
-import socialImage from '../assets/undraw/undraw_design_inspiration.png'
+import image from '../assets/images/Alpine lake sunset.jpg'
 
 const frontmatter: Frontmatter = {
   title: SiteMetadata.title,
   description: SiteMetadata.description,
-  coverSVG: coverSVG,
-  socialImage: socialImage,
-  publishDate: SiteMetadata.buildTime
+  image: image,
+  pubDate: SiteMetadata.buildTime
 }
 
 const posts = await getCollection('blog', ({ data }) => {
   return data.draft !== true
 })
-const latestPosts = posts.sort((a, b) => +b.data.publishDate - +a.data.publishDate)
+const latestPosts = posts.sort((a, b) =>
+  a.data.pubDate && b.data.pubDate ? +b.data.pubDate - +a.data.pubDate : 0
+)
 ---
 
 <Base frontmatter={frontmatter}>
