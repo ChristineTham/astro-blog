@@ -33,6 +33,7 @@ export default defineConfig({
     'i-bi-instagram',
     'i-bi-linkedin',
     'i-bi-telephone',
-    'i-bi-twitter'    
+    'i-bi-twitter',
+    'i-heroicons-x'   
   ]
 })
