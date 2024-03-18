@@ -17,6 +17,16 @@ const blog = defineCollection({
     })
 })
 
+const page = defineCollection({
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      pubDate: z.date().optional(),
+      image: image().optional()
+    })
+})
+
 const category = defineCollection({
   schema: ({ image }) =>
     z.object({
@@ -48,6 +58,7 @@ const social = defineCollection({
 // 3. Export multiple collections to register them
 export const collections = {
   blog,
+  page,
   category,
   author,
   social

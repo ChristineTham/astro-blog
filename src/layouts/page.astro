@@ -1,42 +1,23 @@
 ---
-import type { Frontmatter } from '../config'
 import Base from '../layouts/base.astro'
 import PageHero from '../components/pagehero.astro'
-import { DefaultImage } from '../config'
+import type { CollectionEntry } from 'astro:content'
 
 export interface Props {
-  frontmatter: {
-    layout: string
-    title: string
-    description: string
-    pubDate: string
-    image: string
-  }
+  frontmatter: CollectionEntry<'page'>['data']
 }
 
 const { frontmatter } = Astro.props
-
-const images = import.meta.glob<ImageMetadata>('../assets/**/*', {
-  import: 'default'
-})
-const image = (await images[frontmatter.image]()) || DefaultImage
-
-const fm: Frontmatter = {
-  title: frontmatter.title,
-  description: frontmatter.description,
-  pubDate: new Date(frontmatter.pubDate),
-  image: image
-}
 ---
 
-<Base frontmatter={fm}>
+<Base {frontmatter}>
   <main class='dark:bg-gray-900'>
     <article class='post'>
       <header>
         <PageHero
-          title={frontmatter.title}
+          title={frontmatter.title!}
           description={frontmatter.description}
-          {image}
+          image={frontmatter.image}
         />
       </header>
       <section
