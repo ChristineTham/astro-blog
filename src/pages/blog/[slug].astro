@@ -1,5 +1,4 @@
 ---
-import type { Frontmatter } from '../../config'
 import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
 import Layout from '../../layouts/blog.astro'
@@ -34,7 +33,7 @@ const { post, prev, next } = Astro.props
 // @ts-ignore
 const { Content, remarkPluginFrontmatter } = await post.render()
 let fixedpost = post
-const rfrontmatter = remarkPluginFrontmatter as Frontmatter
+const rfrontmatter = remarkPluginFrontmatter as CollectionEntry<'blog'>['data']
 if (rfrontmatter) {
   fixedpost.data.minutesRead = rfrontmatter.minutesRead
 }

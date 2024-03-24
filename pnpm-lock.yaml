@@ -123,10 +123,10 @@ devDependencies:
     version: 5.0.0
   unocss:
     specifier: ^0.58.6
-    version: 0.58.6(postcss@8.4.38)(vite@5.2.4)
+    version: 0.58.6(postcss@8.4.38)(vite@5.2.5)
   vite:
-    specifier: ^5.2.4
-    version: 5.2.4
+    specifier: ^5.2.5
+    version: 5.2.5
 
 packages:
 
@@ -1183,7 +1183,7 @@ packages:
     peerDependencies:
       unocss: '>= 0.31.13 < 1'
     dependencies:
-      unocss: 0.58.6(postcss@8.4.38)(vite@5.2.4)
+      unocss: 0.58.6(postcss@8.4.38)(vite@5.2.5)
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -1559,7 +1559,7 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@unocss/astro@0.58.6(vite@5.2.4):
+  /@unocss/astro@0.58.6(vite@5.2.5):
     resolution: {integrity: sha512-0BvbhEp5Ln6wFNnhISusB2hcfycWkdgnjlFMcLT69efvj4G39MzB6JYT/1qiidLfpj35HcqkpBz7TfZ4bUmOAw==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0 || ^5.0.0-0
@@ -1569,8 +1569,8 @@ packages:
     dependencies:
       '@unocss/core': 0.58.6
       '@unocss/reset': 0.58.6
-      '@unocss/vite': 0.58.6(vite@5.2.4)
-      vite: 5.2.4
+      '@unocss/vite': 0.58.6(vite@5.2.5)
+      vite: 5.2.5
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -1779,7 +1779,7 @@ packages:
       '@unocss/core': 0.58.6
     dev: true
 
-  /@unocss/vite@0.58.6(vite@5.2.4):
+  /@unocss/vite@0.58.6(vite@5.2.5):
     resolution: {integrity: sha512-DPXCoYU/Ozqc/Jeptd41XvtW8MSgVxmtTyhpMAsm/hJuBfwIV7Fy3TZquf4V9BpaTb4ao1LVXzgXmVUmj2HXpA==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0 || ^5.0.0-0
@@ -1794,7 +1794,7 @@ packages:
       chokidar: 3.6.0
       fast-glob: 3.3.2
       magic-string: 0.30.8
-      vite: 5.2.4
+      vite: 5.2.5
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -2142,8 +2142,8 @@ packages:
       tsconfck: 3.0.3(typescript@5.4.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.4
-      vitefu: 0.2.5(vite@5.2.4)
+      vite: 5.2.5
+      vitefu: 0.2.5(vite@5.2.5)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -6782,7 +6782,7 @@ packages:
       unist-util-visit-parents: 6.0.1
     dev: true
 
-  /unocss@0.58.6(postcss@8.4.38)(vite@5.2.4):
+  /unocss@0.58.6(postcss@8.4.38)(vite@5.2.5):
     resolution: {integrity: sha512-HBstDtC6KKD5yCYh5hHpPdHGZai0B/iLlDwkOIK+xfQYrvl8tNBvKfRz3xgiaI5MJ+fLmEOxbfXQIjleU1A0iA==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -6794,7 +6794,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      '@unocss/astro': 0.58.6(vite@5.2.4)
+      '@unocss/astro': 0.58.6(vite@5.2.5)
       '@unocss/cli': 0.58.6
       '@unocss/core': 0.58.6
       '@unocss/extractor-arbitrary-variants': 0.58.6
@@ -6813,8 +6813,8 @@ packages:
       '@unocss/transformer-compile-class': 0.58.6
       '@unocss/transformer-directives': 0.58.6
       '@unocss/transformer-variant-group': 0.58.6
-      '@unocss/vite': 0.58.6(vite@5.2.4)
-      vite: 5.2.4
+      '@unocss/vite': 0.58.6(vite@5.2.5)
+      vite: 5.2.5
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -6903,8 +6903,8 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite@5.2.4:
-    resolution: {integrity: sha512-vjFghvHWidBTinu5TCymJk/lRHlR5ljqB83yugr0HA1xspUPdOZHqbqDLnZ8f9/jINrtFHTCYYyIUi+o+Q5iyg==}
+  /vite@5.2.5:
+    resolution: {integrity: sha512-a+rTAqkMmJ2hQpC6dfAyyc5M0YLH3BGZKLpA6pU9AhzlcK1YZS8P/ov9OcdHxaf+j0sM0DIh/txH7ydTHUpISg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -6938,7 +6938,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitefu@0.2.5(vite@5.2.4):
+  /vitefu@0.2.5(vite@5.2.5):
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -6946,7 +6946,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.2.4
+      vite: 5.2.5
     dev: true
 
   /volar-service-css@0.0.34(@volar/language-service@2.1.5):

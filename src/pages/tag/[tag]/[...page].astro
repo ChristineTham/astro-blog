@@ -1,7 +1,6 @@
 ---
 import type { PaginateFunction, Page } from 'astro'
 import type { CollectionEntry } from 'astro:content'
-import type { Frontmatter } from '../../../config'
 import { SiteMetadata, PAGE_SIZE } from '../../../config'
 import { getCollection } from 'astro:content'
 import Base from '../../../layouts/base.astro'
@@ -17,15 +16,14 @@ export interface Props {
 const { tag } = Astro.params
 const { page } = Astro.props
 
-const frontmatter: Frontmatter = {
+const frontmatter: CollectionEntry<'page'>['data'] = {
   title:
     'Tag: ' +
     tag +
     (page.size < page.total ? ' (page ' + page.currentPage + ' of ' + page.lastPage + ')' : ''),
   description:
     'Showing articles ' + (page.start + 1) + '-' + (page.end + 1) + ' (total ' + page.total + ')',
-  image: image,
-  pubDate: SiteMetadata.buildTime
+  image: image
 }
 
 const currentPage = Astro.url.pathname.replace(/(\/\d*)?\/$/, '')

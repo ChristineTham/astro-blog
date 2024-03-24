@@ -20,10 +20,15 @@ const blog = defineCollection({
 const page = defineCollection({
   schema: ({ image }) =>
     z.object({
+      draft: z.boolean().optional(),
       title: z.string(),
       description: z.string().optional(),
       pubDate: z.date().optional(),
-      image: image().optional()
+      author: reference('author').optional(),
+      image: image().optional(),
+      images: z.array(image()).optional(),
+      gallery: z.string().optional(),
+      tags: z.array(z.string()).optional()
     })
 })
 

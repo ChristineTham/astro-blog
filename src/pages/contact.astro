@@ -1,17 +1,15 @@
 ---
-import type { Frontmatter } from '../config'
-import { SiteMetadata } from '../config'
+import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
 import Base from '../layouts/base.astro'
 import PageHero from '../components/pagehero.astro'
 import image from '../assets/images/phone.jpg'
 
-const frontmatter: Frontmatter = {
+const frontmatter: CollectionEntry<'page'>['data'] = {
   title: 'Contact',
   description: 'Our presence is real and digital. Contact us through the following ways.',
-  image: image,
-  pubDate: SiteMetadata.buildTime
+  image: image
 }
 
 const social = await getCollection('social')
