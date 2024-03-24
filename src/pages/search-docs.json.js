@@ -12,7 +12,7 @@ const documents = await Promise.all(
       description: post.data.description,
       author: `${author.data.title} (${author.data.contact})`,
       pubDate: post.data.pubDate,
-      categories: post.data.categories.map(category => category.slug),
+      categories: post.data.categories.map((category) => category.slug),
       tags: post.data.tags
     }
   })
