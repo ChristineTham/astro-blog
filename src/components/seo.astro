@@ -21,7 +21,7 @@ export interface Props {
 const { frontmatter } = Astro.props
 
 const social = await getCollection('social')
-const siteurl = new URL(import.meta.env.BASE_URL, Astro.url)
+const siteurl = new URL(`${import.meta.env.BASE_URL}`, Astro.url)
 const type = Astro.url.toString().includes('blog') ? 'post' : 'page'
 const year = SiteMetadata.buildTime.getFullYear()
 const image = await getImage({

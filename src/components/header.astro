@@ -44,7 +44,7 @@ import { Logo } from '../config'
               {
                 NavigationLinks.map((item) => (
                   <a
-                    href={import.meta.env.BASE_URL + item.href}
+                    href={`${import.meta.env.BASE_URL}` + item.href}
                     class={
                       (item.href.length > 0 && Astro.url.toString().includes(item.href)
                         ? 'bg-purple-200 text-pink-600 dark:bg-purple-800 dark:text-pink-300'
@@ -94,7 +94,7 @@ import { Logo } from '../config'
         {
           NavigationLinks.map((item) => (
             <a
-              href={import.meta.env.BASE_URL + item.href}
+              href={`${import.meta.env.BASE_URL}` + item.href}
               class:list={[
                 item.href.length > 0 && Astro.url.toString().includes(item.href)
                   ? 'bg-purple-200 text-pink-600 dark:bg-purple-800 dark:text-pink-300'

@@ -20,7 +20,7 @@ export async function GET(context) {
       atom: 'http://www.w3.org/2005/Atom'
     },
     // add atom:link to be compatible with atom
-    customData: `<atom:link href="${import.meta.env.BASE_URL}rss.xml" rel="self" type="application/rss+xml" />`,
+    customData: `<atom:link href="${`${import.meta.env.BASE_URL}`}rss.xml" rel="self" type="application/rss+xml" />`,
     // list of `<item>`s in output xml
     // simple example: generate items for every md file in /src/pages
     // see "Generating items" section for required data and advanced use cases
