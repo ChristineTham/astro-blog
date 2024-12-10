@@ -3,7 +3,7 @@ title: Markdown Cheat Sheet
 description: A quick reference to the Markdown syntax.
 author: matt-cone
 pubDate: 2022-08-10T00:00:00.000Z
-image: ../../assets/images/Mt Tomah (63).jpeg
+image: ../images/Mt Tomah (63).jpeg
 categories:
   - information
 tags:

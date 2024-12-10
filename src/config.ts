@@ -32,8 +32,8 @@ export const SiteMetadata = {
 
 export { default as Logo } from './assets/astro/astro-icon-dark.svg'
 export { default as LogoImage } from './assets/astro/astro-logo-dark.png'
-export { default as FeaturedImage } from './assets/images/Alpine lake sunset.jpg'
-export { default as DefaultImage } from './assets/images/Alpine lake sunset.jpg'
+export { default as FeaturedImage } from './images/Alpine lake sunset.jpg'
+export { default as DefaultImage } from './images/Alpine lake sunset.jpg'
 
 export const NavigationLinks = [
   { name: 'Home', href: '' },

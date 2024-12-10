@@ -1,5 +1,5 @@
 ---
 title: 'General'
-image: ../../assets/images/gears.jpg
+image: ../images/gears.jpg
 description: General Category
 ---

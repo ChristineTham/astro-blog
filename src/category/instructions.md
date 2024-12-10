@@ -1,5 +1,5 @@
 ---
 title: 'instructions'
-image: ../../assets/images/fish.jpg
+image: ../images/fish.jpg
 description: 'Guidelines on using this starter.'
 ---

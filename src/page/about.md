@@ -2,7 +2,7 @@
 title: About
 description: Description of Hello Astro Starter
 pubDate: 2023-06-13T00:00:00.000Z
-image: ../../assets/images/Alpine lake sunset.jpg
+image: ../images/Alpine lake sunset.jpg
 ---
 
 This is multi-purpose Astro starter template based on the following:

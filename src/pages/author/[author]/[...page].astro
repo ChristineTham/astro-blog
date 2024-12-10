@@ -9,7 +9,7 @@ import Base from '../../../layouts/base.astro'
 import PageHero from '../../../components/pagehero.astro'
 import BlogRoll from '../../../components/blogroll.astro'
 import PaginateControl from '../../../components/paginatecontrol.astro'
-import image from '../../../assets/images/authors.jpg'
+import image from '../../../images/authors.jpg'
 
 export interface Props {
   page: Page<CollectionEntry<'blog'>>
@@ -49,9 +49,9 @@ export async function getStaticPaths({ paginate }: { paginate: PaginateFunction 
 
   return authors.flatMap((author) => {
     return paginate(
-      posts.filter((post) => post.data.author!.slug == author.slug),
+      posts.filter((post) => post.data.author!.id == author.id),
       {
-        params: { author: author.slug },
+        params: { author: author.id },
         pageSize: PAGE_SIZE
       }
     )
