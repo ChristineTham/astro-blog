@@ -107,3 +107,4 @@ All commands are run from the root of the project, from a terminal:
 ## Release History
 
 - 1.0.0: Initial Release
+- 2.0.0: Upgrade to Astro 5
