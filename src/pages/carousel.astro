@@ -37,18 +37,18 @@ const latestPosts = posts.sort((a, b) =>
 <Base frontmatter={frontmatter}>
   <MyCarousel pages={carouselPages}>
     <h1
-      class='text-left text-4xl text-gray-100 font-extrabold tracking-tight md:text-6xl sm:text-5xl'
+      class='text-4xl text-gray-100 tracking-tight font-extrabold text-left md:text-6xl sm:text-5xl'
     >
-      <span class='block text-purple-500 xl:inline'>Astro Blog</span>
+      <span class='text-purple-500 block xl:inline'>Astro Blog</span>
     </h1>
     <p
-      class='mt-3 text-base text-gray-300 lg:mx-0 sm:mx-auto md:mt-5 sm:mt-5 sm:max-w-xl sm:text-lg'
+      class='text-base text-gray-300 mt-3 sm:text-lg lg:mx-0 sm:mx-auto md:mt-5 sm:mt-5 sm:max-w-xl'
     >
       Astro Blog is a blog starter template written in Typescript, TailwindCSS and Astro. It
       supports Markdown blog posts (including photo galleries), plus full text search.
     </p>
     <p
-      class='mt-3 text-base text-gray-300 lg:mx-0 sm:mx-auto md:mt-5 sm:mt-5 sm:max-w-xl sm:text-lg'
+      class='text-base text-gray-300 mt-3 sm:text-lg lg:mx-0 sm:mx-auto md:mt-5 sm:mt-5 sm:max-w-xl'
     >
       It has full SEO support for Facebook (Open Graph) tags, Twitter Cards and Schema/JSON-LD
       metadata. It also features fully auto generated RSS feed and sitemap for search engine
@@ -58,7 +58,7 @@ const latestPosts = posts.sort((a, b) =>
       <div class='rounded-md shadow'>
         <a
           href='/about'
-          class='w-full flex items-center justify-center border border-transparent rounded-md bg-purple-600 px-8 py-2 text-base text-white font-medium dark:bg-purple-300 hover:bg-pink-600 md:px-10 md:py-3 md:text-lg dark:text-black dark:hover:bg-pink-300'
+          class='text-base text-white font-medium px-8 py-2 border border-transparent rounded-md bg-purple-600 flex w-full items-center justify-center md:text-lg dark:text-black md:px-10 md:py-3 dark:bg-purple-300 hover:bg-pink-600 dark:hover:bg-pink-300'
         >
           About
         </a>
@@ -66,7 +66,7 @@ const latestPosts = posts.sort((a, b) =>
       <div class='mt-3 sm:ml-3 sm:mt-0'>
         <a
           href='https://github.com/sponsors/hellotham'
-          class='w-full flex items-center justify-center border border-transparent rounded-md bg-purple-100 px-8 py-2 text-base text-purple-800 font-medium dark:bg-purple-900 hover:bg-pink-200 md:px-10 md:py-3 md:text-lg dark:text-purple-100 dark:hover:bg-pink-900'
+          class='text-base text-purple-800 font-medium px-8 py-2 border border-transparent rounded-md bg-purple-100 flex w-full items-center justify-center md:text-lg dark:text-purple-100 md:px-10 md:py-3 dark:bg-purple-900 hover:bg-pink-200 dark:hover:bg-pink-900'
           rel='noopener noreferrer'
           target='_blank'
         >
@@ -79,5 +79,5 @@ const latestPosts = posts.sort((a, b) =>
   <FindOutMore />
   <LatestArticles posts={latestPosts} />
   <CTA />
-  <div class='bg-white p-24 dark:bg-black md:p-12'></div>
+  <div class='p-24 bg-white md:p-12 dark:bg-black'></div>
 </Base>

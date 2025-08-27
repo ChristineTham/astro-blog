@@ -108,3 +108,4 @@ All commands are run from the root of the project, from a terminal:
 
 - 1.0.0: Initial Release
 - 2.0.0: Upgrade to Astro 5
+- 2.0.1: Remove extra packages, upgraded eslint/prettier configs, lints

@@ -2,9 +2,8 @@
 import {
   defineConfig,
   presetIcons,
-  presetAttributify,
   presetTypography,
-  presetUno
+  presetWind4
 } from 'unocss'
 
 export default defineConfig({
@@ -16,8 +15,7 @@ export default defineConfig({
         // ...
       }
     }),
-    presetAttributify(), // required when using attributify mode
-    presetUno(), // required
+    presetWind4(), // required
     presetTypography()
   ],
   safelist: [
@@ -31,6 +29,6 @@ export default defineConfig({
     'i-bi-instagram',
     'i-bi-linkedin',
     'i-bi-telephone',
-    'i-bi-twitter' 
+    'i-bi-twitter'
   ]
 })

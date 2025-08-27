@@ -14,19 +14,19 @@ const { base, page } = Astro.props
 <div class='mt-4 flex items-center'>
   <a
     href={`${import.meta.env.BASE_URL}` + 'categories'}
-    class='inline-block rounded-md bg-purple-600 px-2 py-1 text-base text-white hover:bg-pink-600 md:text-lg'
+    class='text-base text-white px-2 py-1 rounded-md bg-purple-600 inline-block md:text-lg hover:bg-pink-600'
   >
     Categories
   </a>
   <a
     href={`${import.meta.env.BASE_URL}` + 'tags'}
-    class='ml-4 inline-block rounded-md bg-purple-600 px-2 py-1 text-base text-white hover:bg-pink-600 md:text-lg'
+    class='text-base text-white ml-4 px-2 py-1 rounded-md bg-purple-600 inline-block md:text-lg hover:bg-pink-600'
   >
     Tags
   </a>
   <a
     href={`${import.meta.env.BASE_URL}` + 'authors'}
-    class='ml-4 inline-block rounded-md bg-purple-600 px-2 py-1 text-base text-white hover:bg-pink-600 md:text-lg'
+    class='text-base text-white ml-4 px-2 py-1 rounded-md bg-purple-600 inline-block md:text-lg hover:bg-pink-600'
   >
     Authors
   </a>
@@ -34,7 +34,7 @@ const { base, page } = Astro.props
     page.size < page.total && (
       <div class='ml-4'>
         <nav
-          class='relative z-0 inline-flex rounded-md shadow-sm -space-x-px'
+          class='rounded-md inline-flex shadow-sm relative z-0 -space-x-px'
           aria-label='Pagination'
         >
           <a
@@ -79,7 +79,7 @@ const { base, page } = Astro.props
       </div>
     )
   }
-  <p class='ml-4 text-white italic'>
+  <p class='text-white ml-4 italic'>
     Articles {page.start + 1}-{page.end + 1} (total {page.total})
   </p>
 </div>
