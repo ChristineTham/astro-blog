@@ -108,4 +108,5 @@ All commands are run from the root of the project, from a terminal:
 
 - 1.0.0: Initial Release
 - 2.0.0: Upgrade to Astro 5
-- 2.0.1: Remove extra packages, upgraded eslint/prettier configs, lints
+- 2.1.0: Remove extra packages, upgraded eslint/prettier configs, lints
+- 2.2.0: Enhanced photoswipe integration, use astro-masonry and astro-swiper replacing bespoke, lint

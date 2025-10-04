@@ -4,7 +4,7 @@ import js from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import astro from 'eslint-plugin-astro'
 import prettier from 'eslint-plugin-prettier'
-import unocss from '@unocss/eslint-config/flat'
+import markdown from '@eslint/markdown'
 
 // parsers
 const tsParser = tseslint.parser
@@ -56,7 +56,18 @@ export default defineConfig([
       '@typescript-eslint/no-explicit-any': 'off' // you may want this as it can get annoying
     }
   },
-  unocss,
+  {
+    files: ['**/*.md'],
+    plugins: {
+      markdown
+    },
+    language: 'markdown/gfm',
+    processor: 'markdown/markdown',
+    rules: {
+      // Minimal rules for markdown to avoid conflicts
+      'no-html': 'off'
+    }
+  },
   // Ignore patterns
   {
     ignores: ['dist/**', '**/*.d.ts', '.github/']
