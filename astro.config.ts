@@ -11,8 +11,10 @@ export default defineConfig({
   site: 'https://christham.net/',
   base: '/astro-blog/',
   integrations: [UnoCSS(), sitemap(), alpinejs(), robotsTxt()],
+  image: {
+    layout: 'constrained'
+  },
   markdown: {
-    extendDefaultPlugins: true,
     remarkPlugins: [remarkReadingTime, remarkEmoji],
     shikiConfig: {
       themes: {
