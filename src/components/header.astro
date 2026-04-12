@@ -18,7 +18,7 @@ import { Logo } from '../config'
             x-on:click="isOpen = !isOpen"
             class="text-purple-600 p-2 rounded-md inline-flex items-center justify-center dark:text-purple-300 hover:text-pink-600 focus:outline-hidden hover:bg-purple-200 focus:ring-2 focus:ring-purple-300 focus:ring-inset dark:hover:text-pink-300 dark:hover:bg-purple-800 dark:focus:ring-purple-800"
             aria-controls="mobile-menu"
-            aria-expanded="false"
+            x-bind:aria-expanded="isOpen"
           >
             <span class="sr-only">Open main menu</span>
             <div
