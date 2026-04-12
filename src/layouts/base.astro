@@ -11,6 +11,8 @@ export interface Props {
 }
 
 const { frontmatter } = Astro.props
+const absolute = (path: string) =>
+  new URL(`${import.meta.env.BASE_URL}${path}`, Astro.site).toString()
 ---
 
 <!doctype html>
@@ -19,12 +21,12 @@ const { frontmatter } = Astro.props
     <meta charset="UTF-8" />
     <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href={`${Astro.site}favicon.ico`} sizes="any" />
-    <link rel="icon" href={`${Astro.site}favicon.svg`} type="image/svg+xml" />
-    <link rel="apple-touch-icon" href={`${Astro.site}apple-touchicon.png`} />
-    <link rel="manifest" href={`${Astro.site}site.webmanifest`} />
-    <link rel="sitemap" href={`${Astro.site}sitemap-indexxml`} />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href={`${Astro.site}rss.xml`} />
+    <link rel="icon" href={absolute('favicon.ico')} sizes="any" />
+    <link rel="icon" href={absolute('favicon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={absolute('apple-touch-icon.png')} />
+    <link rel="manifest" href={absolute('site.webmanifest')} />
+    <link rel="sitemap" href={absolute('sitemap-index.xml')} />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href={absolute('rss.xml')} />
     <meta name="generator" content={Astro.generator} />
     <SEO frontmatter={frontmatter} />
     <script is:inline>

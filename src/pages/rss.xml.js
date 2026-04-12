@@ -20,7 +20,7 @@ export async function GET(context) {
       atom: 'http://www.w3.org/2005/Atom'
     },
     // add atom:link to be compatible with atom
-    customData: `<atom:link href="${`${import.meta.env.BASE_URL}`}rss.xml" rel="self" type="application/rss+xml" />`,
+    customData: `<atom:link href="${new URL(`${import.meta.env.BASE_URL}rss.xml`, context.site).toString()}" rel="self" type="application/rss+xml" />`,
     // list of `<item>`s in output xml
     // simple example: generate items for every md file in /src/pages
     // see "Generating items" section for required data and advanced use cases
@@ -28,7 +28,7 @@ export async function GET(context) {
       posts.map(async (post) => {
         const author = await getEntry(post.data.author)
         return {
-          link: context.site + 'blog/' + post.id,
+          link: new URL(`${import.meta.env.BASE_URL}blog/${post.id}`, context.site).toString(),
           title: post.data.title,
           description: post.data.description,
           author: `${author.data.title} (${author.data.contact})`,
@@ -39,7 +39,7 @@ export async function GET(context) {
           width="${post.data.image.width}"
           height="${post.data.image.height}"
           medium="image"
-          url="${context.site + post.data.image.src.slice(1)}" />
+          url="${new URL(post.data.image.src, context.site).toString()}" />
       `
         }
       })
